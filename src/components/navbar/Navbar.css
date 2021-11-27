@@ -1,0 +1,110 @@
+nav {
+  position: absolute;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0 1rem 2rem;
+}
+
+nav .logo {
+  cursor: pointer;
+}
+nav .logo img {
+  width: 35px;
+  height: 35px;
+}
+
+/*Menu items Styling*/
+
+nav .menu {
+  color: white;
+  cursor: pointer;
+  z-index: 100;
+  padding: 1rem 2rem;
+}
+
+nav .mobile_menu {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: -50rem;
+  width: 17rem;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: 10;
+  backdrop-filter: blur(11px);
+  transition: all 0.5s ease;
+}
+
+nav .mobile_menu.active {
+  right: 0;
+}
+
+nav .mobile_menu .menu_items {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  width: 100%;
+}
+nav .mobile_menu .menu_items .menu_item {
+  width: 100%;
+  padding: 1rem 1.7rem;
+  font-family: var(--font_primary);
+  font-size: 1.1rem;
+  transition: all 0.5s ease;
+}
+nav .mobile_menu .menu_items .menu_item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+nav .mobile_menu .menu_items .menu_item span {
+  font-weight: 600;
+  margin-right: 0.3rem;
+}
+
+.text-link {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+@media screen and (min-width: 600px) {
+  nav .menu {
+    display: none;
+  }
+  nav .mobile_menu {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    flex-direction: row;
+    width: 500px;
+    top: 0;
+    height: 4rem;
+  }
+  nav .mobile_menu .menu_items {
+    flex-direction: row;
+    width: 100%;
+    margin-top: 0;
+    height: 100%;
+    justify-content: flex-start;
+  }
+  nav .mobile_menu .menu_items .menu_item {
+    font-family: var(--font_primary);
+    font-size: 1.1rem;
+    transition: all 0.5s ease;
+    height: 100%;
+    padding: 1rem 1.3rem;
+  }
+  nav .mobile_menu .menu_items .menu_item.active {
+    border-bottom: 3px solid white;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  nav .mobile_menu {
+    width: 700px;
+  }
+}
