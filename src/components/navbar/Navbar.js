@@ -3,15 +3,15 @@ import "./Navbar.css";
 import logo from "../../assets/shared/logo.svg";
 import hamburger from "../../assets/shared/icon-hamburger.svg";
 import closeMenu from "../../assets/shared/icon-close.svg";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 const Navbar = () => {
   const [menuToggle, setmenuToggle] = useState(false);
   return (
     <nav>
       <div className="logo">
-        <Link to="/">
+        <NavLink to="/">
           <img src={logo} alt="" />
-        </Link>
+        </NavLink>
       </div>
       <div className="menu">
         <img
@@ -22,26 +22,26 @@ const Navbar = () => {
       </div>
       <div className={menuToggle ? "mobile_menu active" : "mobile_menu"}>
         <ul className="menu_items">
-          <Link to="/" className="text-link">
-            <li className="menu_item active">
+          <NavLink to="/" className="text-link" activeClassName="active">
+            <li className="menu_item">
               <span>00</span> Home
             </li>
-          </Link>
-          <Link to="/destination" className="text-link">
+          </NavLink>
+          <NavLink to="/destination" className="text-link">
             <li className="menu_item">
               <span>01</span> Destination
             </li>
-          </Link>
-          <Link to="/crew" className="text-link">
+          </NavLink>
+          <NavLink to="/crew" className="text-link">
             <li className="menu_item">
               <span>02</span> Crew
             </li>
-          </Link>
-          <Link to="/technology" className="text-link">
+          </NavLink>
+          <NavLink to="/technology" className="text-link">
             <li className="menu_item">
               <span>03</span> Technology
             </li>
-          </Link>
+          </NavLink>
         </ul>
       </div>
     </nav>

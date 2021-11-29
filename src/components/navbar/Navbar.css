@@ -35,7 +35,7 @@ nav .mobile_menu {
   background-color: rgba(255, 255, 255, 0.1);
   z-index: 10;
   backdrop-filter: blur(11px);
-  transition: all 0.5s ease;
+  /* transition: all 0.2s ease; */
 }
 
 nav .mobile_menu.active {
@@ -53,7 +53,7 @@ nav .mobile_menu .menu_items .menu_item {
   padding: 1rem 1.7rem;
   font-family: var(--font_primary);
   font-size: 1.1rem;
-  transition: all 0.5s ease;
+  /* transition: all 0.5s ease; */
 }
 nav .mobile_menu .menu_items .menu_item:hover {
   background: rgba(255, 255, 255, 0.2);
@@ -94,11 +94,14 @@ nav .mobile_menu .menu_items .menu_item span {
   nav .mobile_menu .menu_items .menu_item {
     font-family: var(--font_primary);
     font-size: 1.1rem;
-    transition: all 0.5s ease;
+    transition: all 0.1s ease;
     height: 100%;
     padding: 1rem 1.3rem;
   }
-  nav .mobile_menu .menu_items .menu_item.active {
+  /* nav .mobile_menu .menu_items .menu_item.active {
+    border-bottom: 3px solid white;
+  } */
+  nav a.active li {
     border-bottom: 3px solid white;
   }
 }

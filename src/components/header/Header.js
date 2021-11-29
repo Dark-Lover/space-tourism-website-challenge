@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Header.css";
 import Navbar from "../navbar/Navbar";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -17,9 +18,11 @@ const Header = () => {
             world experience!
           </p>
         </div>
-        <div className="explore">
-          <span>Explore</span>
-        </div>
+        <Link to="/destionation">
+          <div className="explore">
+            <span>Explore</span>
+          </div>
+        </Link>
       </div>
     </header>
   );
