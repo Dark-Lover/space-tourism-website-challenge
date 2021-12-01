@@ -18,7 +18,7 @@ const Header = () => {
             world experience!
           </p>
         </div>
-        <Link to="/destionation">
+        <Link to="/destination">
           <div className="explore">
             <span>Explore</span>
           </div>
