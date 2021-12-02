@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "./Header.css";
+import "./Home.css";
 import Navbar from "../navbar/Navbar";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Home = () => {
   return (
     <header>
       <Navbar />
@@ -28,4 +28,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Home;

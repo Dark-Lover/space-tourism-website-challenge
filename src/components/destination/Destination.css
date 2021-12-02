@@ -1,0 +1,270 @@
+header {
+  background: url("/src/assets/destination/background-destination-desktop.jpg")
+    no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* Hero Section styling*/
+
+.dest_hero {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+  max-width: 600px;
+  margin: auto;
+  /* background-color: yellow; */
+}
+
+.dest_hero .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  /* background-color: tomato; */
+  width: 100%;
+}
+
+.dest_hero .m_heading {
+  color: var(--grey);
+  text-transform: uppercase;
+  font-family: var(--font_primary);
+  letter-spacing: 0.12rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.dest_hero .m_heading > span {
+  color: var(--gray);
+}
+
+/* styling sat section */
+.dest_hero .content .sat {
+  /* background-color: green; */
+  margin-top: 0.8rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dest_hero .content .sat .img_box {
+  width: 150px;
+  height: 150px;
+  margin: 0 1rem 0.6rem 1rem;
+}
+
+.dest_hero .content .sat .img_box img {
+  width: 100%;
+}
+
+/* sat info */
+.dest_hero .content .sat .sat_info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.dest_hero .content .sat .sat_info .sat_nav {
+  margin: 0 0 0.6rem 0;
+}
+
+.sat_items {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.sat_item {
+  padding: 0.2rem 0.3rem;
+  border-bottom: 2px solid transparent;
+  transition: all 0.5s ease;
+  text-transform: uppercase;
+  font-family: var(--font_third);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.04rem;
+  color: var(--white);
+}
+
+.sat_item:hover {
+  border-bottom: 2px solid var(--white);
+}
+
+.sat_name {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.7rem;
+  font-weight: 500;
+  font-family: var(--font_third);
+  color: var(--white);
+}
+
+.sat_desc {
+  font-family: var(--font_primary);
+  font-size: 0.8rem;
+  text-align: center;
+  color: var(--grey);
+  letter-spacing: 0.03rem;
+  margin-bottom: 0.8rem;
+}
+
+.sat_info hr {
+  color: var(--gray);
+  width: 85%;
+  margin: auto;
+}
+
+/* Styling travel info distance and time */
+.travel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 0.8rem;
+}
+
+.travel .distance {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.travel_title {
+  text-transform: uppercase;
+  font-family: var(--font_third);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.04rem;
+  color: var(--white);
+  padding-bottom: 0.4rem;
+}
+
+.travel_info {
+  text-transform: uppercase;
+  font-family: var(--font_third);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.04rem;
+  color: var(--white);
+  padding-bottom: 0.5rem;
+}
+/*! End of Costum Styling */
+
+.hero .content .heading {
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: var(--white);
+  font-family: var(--font_sec);
+  font-weight: 400;
+  margin: 1rem 0 1.2rem 0;
+}
+
+.hero .content .description {
+  color: var(--grey);
+  font-family: var(--font_third);
+  font-weight: 400;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  padding: 0 1.3rem;
+}
+
+.hero .explore {
+  width: 9rem;
+  height: 9rem;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  cursor: pointer;
+  transition: border 0.5s ease-in-out;
+  position: relative;
+  z-index: 2;
+}
+
+.hero .explore::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 1s ease;
+}
+
+.hero .explore:hover::before {
+  background: rgba(255, 255, 255, 0.6);
+  width: 150%;
+  height: 150%;
+}
+.hero .explore span {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: var(--black);
+  font-family: var(--font_sec);
+  font-weight: 400;
+}
+
+@media screen and (min-width: 600px) {
+  header {
+    background: url("/src/assets/home/background-home-desktop.jpg") no-repeat;
+  }
+  .hero {
+    flex-direction: row;
+    max-width: 900px;
+    margin: auto;
+  }
+  .hero .content {
+    align-items: unset;
+    max-width: 25rem;
+    padding-right: 0;
+  }
+  .hero .content .m_heading {
+    font-size: 1.8rem;
+    padding-left: 3rem;
+  }
+  .hero .content .heading {
+    font-size: 7rem;
+    text-align: left;
+    padding-left: 3rem;
+  }
+  .hero .content .description {
+    text-align: left;
+    padding-left: 3rem;
+  }
+  .hero .explore {
+    margin: 0 1.5rem;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .hero .content {
+    max-width: 35rem;
+  }
+  .hero .content .description {
+    max-width: 26rem;
+  }
+  .hero .explore {
+    margin: 0 3rem 0 3rem;
+    width: 12rem;
+    height: 12rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .hero .explore {
+    margin: 0 3rem 0 15rem;
+  }
+}

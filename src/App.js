@@ -1,7 +1,9 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/home/Home";
-import Section from "./pages/section/Section";
+import Home from "./components/home/Home";
+import Destination from "./components/destination/Destination";
+
+// import Section from "./pages/section/Section";
 
 function App() {
   return (
@@ -9,7 +11,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/:section" element={<Section />} />
+          {/* <Route path="/:section" element={<Section />} /> */}
+          <Route path="/destination" element={<Destination />} />
         </Routes>
       </Router>
     </div>
