@@ -1,9 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../navbar/Navbar";
 import "./Destination.css";
-import Moon from "../../assets/destination/image-moon.png";
+
+/*Require data and images */
+const data = require("../../components/data.json");
+const myRequire = require.context(
+  "../../assets/destination",
+  false,
+  /\.(png|jpe?g|svg)$/
+);
+/* Import Images Function */
+function importAll(r) {
+  let images = {};
+  r.keys().forEach((item, index) => {
+    images[item.replace("./", "")] = r(item);
+  });
+  return images;
+}
 
 const Destination = () => {
+  const myImages = importAll(myRequire);
+  const { destinations } = data;
+  const [activeSat, setactiveSat] = useState(0);
+
   return (
     <header>
       <Navbar />
@@ -14,33 +33,44 @@ const Destination = () => {
           </div>
           <div className="sat">
             <div className="img_box">
-              <img src={Moon} alt="" />
+              <img
+                src={
+                  myImages[`${destinations[activeSat].images.png}.png`].default
+                }
+                alt=""
+              />
             </div>
             <div className="sat_info">
               <div className="sat_nav">
                 <ul className="sat_items">
-                  <li className="sat_item">Moon</li>
-                  <li className="sat_item">Mars</li>
-                  <li className="sat_item">Europa</li>
-                  <li className="sat_item">Titan</li>
+                  {destinations.map((el, index) => (
+                    <li
+                      className="sat_item"
+                      key={el.name}
+                      onClick={() => {
+                        setactiveSat(index);
+                      }}
+                    >
+                      {el.name}
+                    </li>
+                  ))}
                 </ul>
               </div>
-              <h1 className="sat_name">Moon</h1>
-              <p className="sat_desc">
-                See our planet as you've never seen it before. A perfect
-                relaxing trip away to help regain perspective and come back
-                refreshed. While you're there, take in some history by visiting
-                the Luna 2 and Apollo 11 landing sites.
-              </p>
+              <h1 className="sat_name">{destinations[activeSat].name}</h1>
+              <p className="sat_desc">{destinations[activeSat].description}</p>
               <hr />
               <div className="travel">
                 <div className="distance">
                   <h3 className="travel_title">Avg. distance</h3>
-                  <p className="travel_info">384,400 Km</p>
+                  <p className="travel_info">
+                    {destinations[activeSat].distance}
+                  </p>
                 </div>
                 <div className="time">
                   <h3 className="travel_title">Est. Travel time</h3>
-                  <p className="travel_info">3 days</p>
+                  <p className="travel_info">
+                    {destinations[activeSat].travel}
+                  </p>
                 </div>
               </div>
             </div>

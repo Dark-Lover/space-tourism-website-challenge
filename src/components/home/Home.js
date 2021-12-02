@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Home.css";
 import Navbar from "../navbar/Navbar";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -18,11 +18,11 @@ const Home = () => {
             world experience!
           </p>
         </div>
-        <Link to="/destination">
+        <NavLink to="/destination">
           <div className="explore">
             <span>Explore</span>
           </div>
-        </Link>
+        </NavLink>
       </div>
     </header>
   );
