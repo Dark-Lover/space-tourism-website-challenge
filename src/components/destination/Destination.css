@@ -1,5 +1,5 @@
 header {
-  background: url("/src/assets/destination/background-destination-desktop.jpg")
+  background: url("/src/assets/destination/background-destination-tablet.jpg")
     no-repeat;
   background-size: cover;
   min-height: 100vh;
@@ -16,20 +16,9 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 5rem;
+  padding-top: 6rem;
   max-width: 600px;
   margin: auto;
-  /* background-color: yellow; */
-}
-
-.dest_hero .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0 2rem;
-  /* background-color: tomato; */
-  width: 100%;
 }
 
 .dest_hero .m_heading {
@@ -39,14 +28,24 @@ header {
   letter-spacing: 0.12rem;
   font-size: 1.2rem;
   font-weight: 400;
+  text-align: center;
+  width: 100%;
+  padding: 0 2rem;
 }
 .dest_hero .m_heading > span {
   color: var(--gray);
 }
 
+.dest_hero .content {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+  width: 100%;
+  max-width: 420px;
+}
+
 /* styling sat section */
 .dest_hero .content .sat {
-  /* background-color: green; */
   margin-top: 0.8rem;
   width: 100%;
   display: flex;
@@ -115,6 +114,7 @@ header {
   color: var(--grey);
   letter-spacing: 0.03rem;
   margin-bottom: 0.8rem;
+  min-height: 80px;
 }
 
 .sat_info hr {
@@ -160,112 +160,94 @@ header {
 }
 /*! End of Costum Styling */
 
-.hero .content .heading {
-  font-size: 5rem;
-  text-transform: uppercase;
-  color: var(--white);
-  font-family: var(--font_sec);
-  font-weight: 400;
-  margin: 1rem 0 1.2rem 0;
-}
-
-.hero .content .description {
-  color: var(--grey);
-  font-family: var(--font_third);
-  font-weight: 400;
-  text-align: center;
-  font-size: 1rem;
-  line-height: 1.3rem;
-  padding: 0 1.3rem;
-}
-
-.hero .explore {
-  width: 9rem;
-  height: 9rem;
-  background-color: white;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 3rem;
-  cursor: pointer;
-  transition: border 0.5s ease-in-out;
-  position: relative;
-  z-index: 2;
-}
-
-.hero .explore::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  background: white;
-  border-radius: 50%;
-  z-index: -1;
-  transition: all 1s ease;
-}
-
-.hero .explore:hover::before {
-  background: rgba(255, 255, 255, 0.6);
-  width: 150%;
-  height: 150%;
-}
-.hero .explore span {
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  color: var(--black);
-  font-family: var(--font_sec);
-  font-weight: 400;
-}
-
 @media screen and (min-width: 600px) {
   header {
-    background: url("/src/assets/home/background-home-desktop.jpg") no-repeat;
+    background: url("/src/assets/destination/background-destination-desktop.jpg")
+      no-repeat;
   }
-  .hero {
-    flex-direction: row;
-    max-width: 900px;
-    margin: auto;
+  .dest_hero {
+    padding-top: 8rem;
+    min-width: 600px;
   }
-  .hero .content {
-    align-items: unset;
-    max-width: 25rem;
-    padding-right: 0;
+  .dest_hero .m_heading {
+    margin-bottom: 1.5rem;
   }
-  .hero .content .m_heading {
-    font-size: 1.8rem;
-    padding-left: 3rem;
-  }
-  .hero .content .heading {
-    font-size: 7rem;
-    text-align: left;
-    padding-left: 3rem;
-  }
-  .hero .content .description {
-    text-align: left;
-    padding-left: 3rem;
-  }
-  .hero .explore {
-    margin: 0 1.5rem;
-  }
-}
 
-@media screen and (min-width: 700px) {
-  .hero .content {
-    max-width: 35rem;
+  .dest_hero .content {
+    max-width: 600px;
   }
-  .hero .content .description {
-    max-width: 26rem;
+  .dest_hero .content .sat {
+    flex-direction: row;
   }
-  .hero .explore {
-    margin: 0 3rem 0 3rem;
-    width: 12rem;
-    height: 12rem;
+  .dest_hero .content .sat .img_box {
+    flex: 1;
+  }
+  .dest_hero .content .sat .sat_info {
+    flex: 1;
+  }
+  .dest_hero .content .sat .img_box {
+    width: 250px;
+    height: 250px;
+    margin: 0 2rem 0.6rem 1rem;
+  }
+  .dest_hero .m_heading,
+  .sat_name,
+  .sat_desc,
+  .distance,
+  .travel_title,
+  .travel_info {
+    text-align: left;
+  }
+  .sat_items {
+    justify-content: space-between;
+    max-width: 70%;
+  }
+  .sat_desc {
+    margin-bottom: 2rem;
+  }
+  .sat_info hr {
+    width: 100%;
+  }
+  .travel {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .sat_item {
+    font-size: 0.9rem;
+  }
+  .sat_name {
+    font-size: 2.8rem;
+  }
+  .sat_desc {
+    font-size: 0.9rem;
   }
 }
 
 @media screen and (min-width: 900px) {
-  .hero .explore {
-    margin: 0 3rem 0 15rem;
+  .dest_hero .content {
+    min-width: 900px;
+  }
+  .dest_hero .content .sat .img_box {
+    margin: 0 5rem 0.6rem 1rem;
+    width: 390px;
+    height: 390px;
+  }
+  .sat_items {
+    width: 60%;
+  }
+  .dest_hero .content .sat .sat_info {
+    max-width: 350px;
+  }
+  .dest_hero {
+    min-width: 900px;
+  }
+  .sat_item {
+    font-size: 1rem;
+  }
+  .sat_name {
+    font-size: 3rem;
+  }
+  .sat_desc {
+    font-size: 1rem;
   }
 }

@@ -27,10 +27,10 @@ const Destination = () => {
     <header>
       <Navbar />
       <div className="dest_hero">
+        <div className="m_heading">
+          <span>01</span> pick your destination
+        </div>
         <div className="content">
-          <div className="m_heading">
-            <span>01</span> pick your destination
-          </div>
           <div className="sat">
             <div className="img_box">
               <img
