@@ -27,3 +27,40 @@ ul {
 a {
   text-decoration: none;
 }
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.row {
+  flex-direction: row;
+}
+.column {
+  flex-direction: column;
+}
+
+.role {
+  text-transform: uppercase;
+  color: var(--gray);
+  font-family: var(--font_third);
+  margin-bottom: 0.5rem;
+}
+
+.heading {
+  text-transform: uppercase;
+  color: var(--white);
+  font-family: var(--font_third);
+  font-size: 1.1rem;
+  letter-spacing: 0.03rem;
+}
+
+.lead {
+  font-family: var(--font_third);
+  font-size: 0.85rem;
+  text-align: center;
+  color: var(--grey);
+  letter-spacing: 0.05rem;
+  margin: 1rem 0;
+  font-weight: 400;
+}
