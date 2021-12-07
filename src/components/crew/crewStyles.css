@@ -1,0 +1,57 @@
+header {
+  background: url("/src/assets/crew/background-crew-mobile.jpg") no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* Crew Hero*/
+
+.crew_hero {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 6rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+.crew_hero .m_heading {
+  color: var(--grey);
+  text-transform: uppercase;
+  font-family: var(--font_primary);
+  letter-spacing: 0.12rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.crew_hero .m_heading > span {
+  color: var(--gray);
+}
+
+.crew_hero .content {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  max-width: 420px;
+  align-items: center;
+  border-bottom: 1px solid #45495e;
+  overflow: hidden;
+}
+
+.crew_hero .content .img_box {
+  width: 150px;
+  margin: 1rem 0 -1rem 0;
+}
+.crew_hero .content .img_box img {
+  width: 100%;
+  object-fit: contain;
+}

@@ -1,22 +1,13 @@
 import React, { useState } from "react";
 import Navbar from "../navbar/Navbar";
 import "./Destination.css";
-
+import { importAll, data } from "../Helpers/ImportImges";
 /*Require data and images */
-const data = require("../../components/data.json");
 const myRequire = require.context(
   "../../assets/destination",
   false,
   /\.(png|jpe?g|svg)$/
 );
-/* Import Images Function */
-function importAll(r) {
-  let images = {};
-  r.keys().forEach((item, index) => {
-    images[item.replace("./", "")] = r(item);
-  });
-  return images;
-}
 
 const Destination = () => {
   const myImages = importAll(myRequire);
