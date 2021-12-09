@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../navbar/Navbar";
 import "./techStyles.css";
 import { importAll, data } from "../Helpers/ImportImges";
@@ -10,12 +10,21 @@ const secRequire = require.context(
 );
 
 const Technology = () => {
+  const [mQuery, setMQuery] = useState({
+    matches: window.innerWidth > 900 ? true : false,
+  });
   const myImages = importAll(secRequire);
   const { technology } = data;
   const [space, setSpace] = useState(2);
-  console.log(technology);
+  const imgType = mQuery.matches ? "portrait" : "landscape";
+  useEffect(() => {
+    let mediaQuery = window.matchMedia("(min-width: 900px)");
+    mediaQuery.addEventListener("change", setMQuery);
+    // this is the cleanup function to remove the listener
+    return () => mediaQuery.removeEventListener("change", setMQuery);
+  }, [mQuery]);
   return (
-    <header>
+    <header className="tech_bg">
       <Navbar />
       <div className="technology_hero flex column">
         <div className="m_heading">
@@ -24,7 +33,7 @@ const Technology = () => {
         <div className="content flex column">
           <div className="img_box">
             <img
-              src={myImages[`${technology[space].images.landscape}`].default}
+              src={myImages[`${technology[space].images[imgType]}`].default}
               alt=""
             />
           </div>

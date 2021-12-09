@@ -1,10 +1,12 @@
 header {
-  background: url("/src/assets/crew/background-crew-mobile.jpg") no-repeat;
-  background-size: cover;
   min-height: 100vh;
   position: relative;
-  background-position: center;
   overflow: hidden;
+}
+.crew_bg {
+  background: url("/src/assets/crew/background-crew-tablet.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 /* Crew Hero*/
@@ -72,6 +74,9 @@ header {
 }
 
 @media screen and (min-width: 600px) {
+  .crew_bg {
+    background: url("/src/assets/crew/background-crew-desktop.jpg") no-repeat;
+  }
   .crew_hero .m_heading {
     text-align: left;
   }

@@ -15,7 +15,7 @@ const Destination = () => {
   const [activeSat, setactiveSat] = useState(0);
 
   return (
-    <header>
+    <header className="dest_bg">
       <Navbar />
       <div className="dest_hero">
         <div className="m_heading">

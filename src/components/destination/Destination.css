@@ -1,11 +1,13 @@
 header {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.dest_bg {
   background: url("/src/assets/destination/background-destination-tablet.jpg")
     no-repeat;
   background-size: cover;
-  min-height: 100vh;
-  position: relative;
   background-position: center;
-  overflow: hidden;
 }
 
 /* Hero Section styling*/
@@ -161,10 +163,11 @@ header {
 /*! End of Costum Styling */
 
 @media screen and (min-width: 600px) {
-  header {
+  .dest_bg {
     background: url("/src/assets/destination/background-destination-desktop.jpg")
       no-repeat;
   }
+
   .dest_hero {
     padding-top: 8rem;
     min-width: 600px;

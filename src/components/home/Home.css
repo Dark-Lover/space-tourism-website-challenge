@@ -1,11 +1,13 @@
 header {
-  background: url("/src/assets/home/background-home-tablet.jpg") no-repeat;
   min-height: 100vh;
-  position: relative;
-  background-position: center;
   overflow: hidden;
 }
 
+.home_bg {
+  background: url("/src/assets/home/background-home-tablet.jpg") no-repeat;
+  position: relative;
+  background-position: center;
+}
 /* Hero Section styling*/
 
 .hero {
@@ -95,7 +97,7 @@ header {
 }
 
 @media screen and (min-width: 600px) {
-  header {
+  .home_bg {
     background: url("/src/assets/home/background-home-desktop.jpg") no-repeat;
   }
   .hero {

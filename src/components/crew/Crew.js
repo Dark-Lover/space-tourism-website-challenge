@@ -13,9 +13,8 @@ const Crew = () => {
   const myImages = importAll(secRequire);
   const { crew } = data;
   const [member, setMember] = useState(0);
-  crew.map((el) => console.log(el.name));
   return (
-    <header>
+    <header className="crew_bg">
       <Navbar />
       <div className="crew_hero flex column">
         <div className="m_heading">

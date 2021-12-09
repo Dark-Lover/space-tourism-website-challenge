@@ -22,7 +22,7 @@ const Navbar = () => {
       </div>
       <div className={menuToggle ? "mobile_menu active" : "mobile_menu"}>
         <ul className="menu_items">
-          <NavLink to="/" className="text-link" activeClassName="active">
+          <NavLink to="/" className="text-link" exact={true}>
             <li className="menu_item">
               <span>00</span> Home
             </li>

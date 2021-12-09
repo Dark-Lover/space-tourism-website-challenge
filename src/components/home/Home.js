@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "./Home.css";
 import Navbar from "../navbar/Navbar";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <header>
+    <header className="home_bg">
       <Navbar />
       <div className="hero">
         <div className="content">
@@ -18,11 +18,11 @@ const Home = () => {
             world experience!
           </p>
         </div>
-        <NavLink to="/destination">
+        <Link to="/destination">
           <div className="explore">
             <span>Explore</span>
           </div>
-        </NavLink>
+        </Link>
       </div>
     </header>
   );
