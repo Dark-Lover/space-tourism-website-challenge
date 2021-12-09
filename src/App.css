@@ -64,3 +64,14 @@ a {
   margin: 1rem 0;
   font-weight: 400;
 }
+
+.small {
+  text-transform: uppercase;
+  font-family: var(--font_third);
+  font-size: 0.75rem;
+  text-align: center;
+  color: var(--grey);
+  letter-spacing: 0.05rem;
+  margin: 1rem 0;
+  font-weight: 400;
+}

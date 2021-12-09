@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/home/Home";
 import Destination from "./components/destination/Destination";
 import Crew from "./components/crew/Crew";
+import Technology from "./components/technology/Technology";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           {/* <Route path="/:section" element={<Section />} /> */}
           <Route path="/destination" element={<Destination />} />
           <Route path="/crew" element={<Crew />} />
+          <Route path="/technology" element={<Technology />} />
         </Routes>
       </Router>
     </div>

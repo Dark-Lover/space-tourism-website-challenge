@@ -1,0 +1,144 @@
+header {
+  background: url("/src/assets/technology/background-technology-mobile.jpg")
+    no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* Crew Hero*/
+
+.technology_hero {
+  height: 100%;
+  padding-top: 6rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+.technology_hero .m_heading {
+  color: var(--grey);
+  text-transform: uppercase;
+  font-family: var(--font_primary);
+  letter-spacing: 0.12rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.technology_hero .m_heading > span {
+  color: var(--gray);
+}
+
+.technology_hero .content {
+  width: 100%;
+  margin: auto;
+  max-width: 420px;
+  overflow: hidden;
+}
+
+.technology_hero .content .img_box {
+  width: 100%;
+  margin: 1rem 0 0 0;
+}
+.technology_hero .content .img_box img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.technology_hero .content .technology_infos {
+  z-index: 3;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.technology_hero .content .technology_infos .slide_bullets {
+  /* background-color: green; */
+  padding: 1rem 3rem;
+}
+
+.technology_hero .content .technology_infos .slide_bullets .bullet {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+.technology_hero .content .technology_infos .slide_bullets .bullet.active {
+  background-color: rgba(255, 255, 255, 1);
+}
+.technology_hero .content .technology_infos .slide_bullets .index {
+  color: white;
+  font-family: var(--font_third);
+  font-weight: 400;
+}
+.technology_hero .content .technology_infos .slide_bullets .index.active {
+  color: black;
+}
+
+.technology_hero .content .technology_infos .details .technology_name {
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 600px) {
+  .technology_hero .m_heading {
+    text-align: left;
+  }
+  .technology_hero .content {
+    margin-top: 1rem;
+  }
+  .technology_hero .content .img_box {
+    width: 100%;
+  }
+  .technology_hero .content .technology_infos {
+    border: none;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .technology_hero {
+    width: 100%;
+    max-width: 900px;
+  }
+  .technology_hero .content {
+    width: 100%;
+    max-width: 900px;
+    padding: 0 2rem;
+    flex-direction: row-reverse;
+    height: 100vh;
+  }
+  .technology_hero .content .img_box {
+    /* background-color: olivedrab; */
+    height: 100%;
+    max-width: 380px;
+  }
+  .technology_hero .content .technology_infos {
+    /* background-color: rgb(4, 51, 51); */
+    height: 100%;
+    align-items: flex-start;
+  }
+  .technology_hero .content .technology_infos .slide_bullets {
+    padding: 3rem 0;
+  }
+  .technology_hero .content .technology_infos .details {
+    /* background-color: tomato; */
+    max-width: 500px;
+    margin-right: 3rem;
+    align-items: flex-start;
+  }
+
+  .technology_hero .content .technology_infos .details .technology_job {
+    font-size: 1.5rem;
+  }
+  .technology_hero .content .technology_infos .details .technology_name {
+    font-size: 2.6rem;
+  }
+  .technology_hero .content .technology_infos .details .technology_desc {
+    font-size: 1rem;
+    text-align: left;
+  }
+}
