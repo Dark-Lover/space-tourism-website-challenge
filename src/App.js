@@ -1,21 +1,23 @@
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route, useLocation } from "react-router-dom";
 import Home from "./components/home/Home";
 import Destination from "./components/destination/Destination";
 import Crew from "./components/crew/Crew";
 import Technology from "./components/technology/Technology";
+import { motion, AnimatePresence } from "framer-motion";
 
 function App() {
+  const location = useLocation();
   return (
     <div className="App">
-      <Router>
-        <Switch>
+      <AnimatePresence>
+        <Switch location={location} key={location.key}>
           <Route path="/destination" component={Destination} />
           <Route path="/crew" component={Crew} />
           <Route path="/technology" component={Technology} />
           <Route path="/" component={Home} />
         </Switch>
-      </Router>
+      </AnimatePresence>
     </div>
   );
 }

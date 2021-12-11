@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../navbar/Navbar";
 import "./crewStyles.css";
+import { motion } from "framer-motion";
 import { importAll, data } from "../Helpers/ImportImges";
 /*Require data and images */
 const secRequire = require.context(
@@ -8,6 +9,23 @@ const secRequire = require.context(
   false,
   /\.(png|jpe?g|svg)$/
 );
+// animation
+const containerVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: 0.5,
+      duration: 0.2,
+    },
+  },
+  exit: {
+    x: "-100vw",
+    transition: { ease: "easeInOut" },
+  },
+};
 
 const Crew = () => {
   const myImages = importAll(secRequire);
@@ -16,7 +34,13 @@ const Crew = () => {
   return (
     <header className="crew_bg">
       <Navbar />
-      <div className="crew_hero flex column">
+      <motion.div
+        className="crew_hero flex column"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      >
         <div className="m_heading">
           <span>02</span> Meet your crew
         </div>
@@ -44,7 +68,7 @@ const Crew = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </header>
   );
 };

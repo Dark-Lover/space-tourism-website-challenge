@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../navbar/Navbar";
 import "./techStyles.css";
+import { motion } from "framer-motion";
 import { importAll, data } from "../Helpers/ImportImges";
 /*Require data and images */
 const secRequire = require.context(
@@ -8,6 +9,24 @@ const secRequire = require.context(
   false,
   /\.(png|jpe?g|svg)$/
 );
+
+// animation
+const containerVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: 0.5,
+      duration: 0.2,
+    },
+  },
+  exit: {
+    x: "-100vw",
+    transition: { ease: "easeInOut" },
+  },
+};
 
 const Technology = () => {
   const [mQuery, setMQuery] = useState({
@@ -26,7 +45,13 @@ const Technology = () => {
   return (
     <header className="tech_bg">
       <Navbar />
-      <div className="technology_hero flex column">
+      <motion.div
+        className="technology_hero flex column"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      >
         <div className="m_heading">
           <span>03</span> Space Launch 101
         </div>
@@ -64,7 +89,7 @@ const Technology = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </header>
   );
 };

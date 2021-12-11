@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../navbar/Navbar";
 import "./Destination.css";
+import { motion } from "framer-motion";
 import { importAll, data } from "../Helpers/ImportImges";
 /*Require data and images */
 const myRequire = require.context(
@@ -8,6 +9,23 @@ const myRequire = require.context(
   false,
   /\.(png|jpe?g|svg)$/
 );
+// animation
+const containerVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: 0.5,
+      duration: 0.2,
+    },
+  },
+  exit: {
+    x: "-100vw",
+    transition: { ease: "easeInOut" },
+  },
+};
 
 const Destination = () => {
   const myImages = importAll(myRequire);
@@ -17,7 +35,13 @@ const Destination = () => {
   return (
     <header className="dest_bg">
       <Navbar />
-      <div className="dest_hero">
+      <motion.div
+        className="dest_hero"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      >
         <div className="m_heading">
           <span>01</span> pick your destination
         </div>
@@ -67,7 +91,7 @@ const Destination = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </header>
   );
 };
