@@ -30,7 +30,7 @@ header {
 }
 
 .hero .m_heading {
-  color: var(--grey);
+  color: #d2d8f9;
   text-transform: uppercase;
   font-family: var(--font_primary);
   letter-spacing: 0.09rem;
@@ -48,7 +48,7 @@ header {
 }
 
 .hero .content .description {
-  color: var(--grey);
+  color: #d2d8f9;
   font-family: var(--font_third);
   font-weight: 400;
   text-align: center;

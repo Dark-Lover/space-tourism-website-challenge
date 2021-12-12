@@ -24,7 +24,7 @@ header {
 }
 
 .dest_hero .m_heading {
-  color: var(--grey);
+  color: #d2d8f9;
   text-transform: uppercase;
   font-family: var(--font_primary);
   letter-spacing: 0.12rem;
@@ -92,12 +92,12 @@ header {
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.04rem;
-  color: var(--white);
+  color: #ffffff;
   cursor: pointer;
 }
 
 .sat_item:hover {
-  border-bottom: 2px solid var(--white);
+  border-bottom: 2px solid #ffffff;
 }
 
 .sat_name {
@@ -106,14 +106,14 @@ header {
   font-size: 2.7rem;
   font-weight: 500;
   font-family: var(--font_third);
-  color: var(--white);
+  color: #ffffff;
 }
 
 .sat_desc {
   font-family: var(--font_primary);
   font-size: 0.8rem;
   text-align: center;
-  color: var(--grey);
+  color: #d2d8f9;
   letter-spacing: 0.03rem;
   margin-bottom: 0.8rem;
   min-height: 80px;
@@ -147,7 +147,7 @@ header {
   font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.04rem;
-  color: var(--white);
+  color: #ffffff;
   padding-bottom: 0.4rem;
 }
 
@@ -157,7 +157,7 @@ header {
   font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: 0.04rem;
-  color: var(--white);
+  color: #ffffff;
   padding-bottom: 0.5rem;
 }
 /*! End of Costum Styling */

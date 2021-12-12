@@ -34,7 +34,7 @@ const Technology = () => {
   });
   const myImages = importAll(secRequire);
   const { technology } = data;
-  const [space, setSpace] = useState(2);
+  const [space, setSpace] = useState(0);
   const imgType = mQuery.matches ? "portrait" : "landscape";
   useEffect(() => {
     let mediaQuery = window.matchMedia("(min-width: 900px)");
