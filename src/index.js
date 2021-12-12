@@ -5,7 +5,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    <Router basename="/space-tourism-website-challenge">
       <App />
     </Router>
   </React.StrictMode>,

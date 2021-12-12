@@ -4,7 +4,7 @@ import Home from "./components/home/Home";
 import Destination from "./components/destination/Destination";
 import Crew from "./components/crew/Crew";
 import Technology from "./components/technology/Technology";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   const location = useLocation();
