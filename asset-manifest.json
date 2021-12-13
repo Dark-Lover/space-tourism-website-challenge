@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/space-tourism-website-challenge/static/css/main.10b92b48.chunk.css",
+    "main.css": "/space-tourism-website-challenge/static/css/main.bfce65ed.chunk.css",
     "main.js": "/space-tourism-website-challenge/static/js/main.a4b612e8.chunk.js",
     "main.js.map": "/space-tourism-website-challenge/static/js/main.a4b612e8.chunk.js.map",
     "runtime-main.js": "/space-tourism-website-challenge/static/js/runtime-main.aae6a8c6.js",
@@ -8,7 +8,7 @@
     "static/js/2.df867b0b.chunk.js": "/space-tourism-website-challenge/static/js/2.df867b0b.chunk.js",
     "static/js/2.df867b0b.chunk.js.map": "/space-tourism-website-challenge/static/js/2.df867b0b.chunk.js.map",
     "index.html": "/space-tourism-website-challenge/index.html",
-    "static/css/main.10b92b48.chunk.css.map": "/space-tourism-website-challenge/static/css/main.10b92b48.chunk.css.map",
+    "static/css/main.bfce65ed.chunk.css.map": "/space-tourism-website-challenge/static/css/main.bfce65ed.chunk.css.map",
     "static/js/2.df867b0b.chunk.js.LICENSE.txt": "/space-tourism-website-challenge/static/js/2.df867b0b.chunk.js.LICENSE.txt",
     "static/media/background-crew-desktop.jpg": "/space-tourism-website-challenge/static/media/background-crew-desktop.88a3c692.jpg",
     "static/media/background-crew-tablet.jpg": "/space-tourism-website-challenge/static/media/background-crew-tablet.16d51cf6.jpg",
@@ -39,7 +39,7 @@
   "entrypoints": [
     "static/js/runtime-main.aae6a8c6.js",
     "static/js/2.df867b0b.chunk.js",
-    "static/css/main.10b92b48.chunk.css",
+    "static/css/main.bfce65ed.chunk.css",
     "static/js/main.a4b612e8.chunk.js"
   ]
 }
